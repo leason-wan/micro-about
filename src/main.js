@@ -19,11 +19,11 @@ let instance = null;
 let router = null;
 
 function render(props = {}) {
-  const { container } = props;
+  const { container, name } = props;
 
   router = new VueRouter({
     mode: 'history',
-    base: process.env.BASE_URL,
+    base: name || process.env.BASE_URL,
     routes
   });
 
